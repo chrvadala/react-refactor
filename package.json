@@ -1,0 +1,21 @@
+{
+  "name": "react-refactor",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrvadala/react-refactor.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrvadala/react-refactor/issues"
+  },
+  "homepage": "https://github.com/chrvadala/react-refactor#readme",
+  "dependencies": {
+    "jest": "^21.2.1"
+  }
+}
