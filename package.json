@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/chrvadala/react-refactor#readme",
   "dependencies": {
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "lodash.get": "^4.4.2"
   }
 }
