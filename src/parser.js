@@ -16,7 +16,7 @@ function parseFile(filename){
 }
 
 function parse(code){
-  return babylon.parse(code, parserOpt)
+  return babylon.parse(code, parserOpt).program
 }
 
 module.exports = {
