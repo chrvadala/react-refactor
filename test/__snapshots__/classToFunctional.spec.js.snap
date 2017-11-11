@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`classToFunctional should convert class to functional comp 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "function ClassComp(props)",
+    "start": 0,
+  },
+  Object {
+    "end": 98,
+    "operation": "remove",
+    "start": 0,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "
+	let self = {props};
+",
+    "start": 99,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 116,
+  },
+  Object {
+    "end": 120,
+    "operation": "remove",
+    "start": 116,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 152,
+  },
+  Object {
+    "end": 156,
+    "operation": "remove",
+    "start": 152,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 182,
+  },
+  Object {
+    "end": 186,
+    "operation": "remove",
+    "start": 182,
+  },
+]
+`;
