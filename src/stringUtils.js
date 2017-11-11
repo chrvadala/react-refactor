@@ -16,13 +16,16 @@ function patchString(string, patch) {
   for (let i = 0; i < patch.length; i++) {
     let {operation, start, end, payload} = patch[i];
 
+    //check constraints
     if (end && (start > end)) throw new StartGTEndError()
     if (start > string.length) throw new StartGTLengthError()
     if (cur > start) throw new PatchesUnsortedError()
 
+    //move on cursor
     out += string.substring(cur, start);
     cur = start;
 
+    //perform operation
     switch (operation) {
       case INSERT:
         out += payload;
@@ -37,6 +40,7 @@ function patchString(string, patch) {
     }
   }
 
+  //copy remained part
   out += string.substring(cur);
 
   return out
