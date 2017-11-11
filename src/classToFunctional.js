@@ -1,6 +1,6 @@
 const get = require('lodash.get')
 const traverse = require('traverse')
-const {insert, remove} = require("./string-offset-patch");
+const {insert, remove} = require("./stringUtils");
 const THIS_REPLACER = 'self'
 
 function classToFunctional(classDeclaration) {

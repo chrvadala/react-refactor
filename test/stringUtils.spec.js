@@ -1,4 +1,4 @@
-const {patchString, INSERT, REMOVE, insert, remove} = require('../src/string-offset-patch');
+const {patchString, INSERT, REMOVE, insert, remove} = require('../src/stringUtils');
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 describe('patchString', () => {

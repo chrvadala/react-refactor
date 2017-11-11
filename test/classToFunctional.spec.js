@@ -1,4 +1,4 @@
-const patchString = require("../src/string-offset-patch").patchString;
+const {patchString} = require("../src/stringUtils");
 const {removeSpaces} = require("./testUtils");
 const {classToFunctional} = require('../src/classToFunctional')
 const {parse} = require('../src/parser')
