@@ -8,6 +8,9 @@ class ClassComp extends React.Component {
   constructor(props) {
     super(props);
   }
+  doSomething(){
+    //doSomething()
+  }
   render() {
     let {def} = this.props
     let {props: {ghi}} = this

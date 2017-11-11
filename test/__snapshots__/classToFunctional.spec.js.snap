@@ -8,7 +8,7 @@ Array [
     "start": 0,
   },
   Object {
-    "end": 98,
+    "end": 139,
     "operation": "remove",
     "start": 0,
   },
@@ -17,37 +17,37 @@ Array [
     "payload": "
 	let self = {props};
 ",
-    "start": 99,
+    "start": 140,
   },
   Object {
     "operation": "insert",
     "payload": "self",
-    "start": 116,
+    "start": 157,
   },
   Object {
-    "end": 120,
+    "end": 161,
     "operation": "remove",
-    "start": 116,
+    "start": 157,
   },
   Object {
     "operation": "insert",
     "payload": "self",
-    "start": 152,
+    "start": 193,
   },
   Object {
-    "end": 156,
+    "end": 197,
     "operation": "remove",
-    "start": 152,
+    "start": 193,
   },
   Object {
     "operation": "insert",
     "payload": "self",
-    "start": 182,
+    "start": 223,
   },
   Object {
-    "end": 186,
+    "end": 227,
     "operation": "remove",
-    "start": 182,
+    "start": 223,
   },
 ]
 `;
