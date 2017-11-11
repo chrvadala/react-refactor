@@ -51,3 +51,159 @@ Array [
   },
 ]
 `;
+
+exports[`classToFunctional should support Component 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "function ClassComp(props)",
+    "start": 0,
+  },
+  Object {
+    "end": 133,
+    "operation": "remove",
+    "start": 0,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "
+	let self = {props};
+",
+    "start": 134,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 151,
+  },
+  Object {
+    "end": 155,
+    "operation": "remove",
+    "start": 151,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 187,
+  },
+  Object {
+    "end": 191,
+    "operation": "remove",
+    "start": 187,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 217,
+  },
+  Object {
+    "end": 221,
+    "operation": "remove",
+    "start": 217,
+  },
+]
+`;
+
+exports[`classToFunctional should support PureComponent 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "function ClassComp(props)",
+    "start": 0,
+  },
+  Object {
+    "end": 137,
+    "operation": "remove",
+    "start": 0,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "
+	let self = {props};
+",
+    "start": 138,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 155,
+  },
+  Object {
+    "end": 159,
+    "operation": "remove",
+    "start": 155,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 191,
+  },
+  Object {
+    "end": 195,
+    "operation": "remove",
+    "start": 191,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 221,
+  },
+  Object {
+    "end": 225,
+    "operation": "remove",
+    "start": 221,
+  },
+]
+`;
+
+exports[`classToFunctional should support React.PureComponent 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "function ClassComp(props)",
+    "start": 0,
+  },
+  Object {
+    "end": 143,
+    "operation": "remove",
+    "start": 0,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "
+	let self = {props};
+",
+    "start": 144,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 161,
+  },
+  Object {
+    "end": 165,
+    "operation": "remove",
+    "start": 161,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 197,
+  },
+  Object {
+    "end": 201,
+    "operation": "remove",
+    "start": 197,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "self",
+    "start": 227,
+  },
+  Object {
+    "end": 231,
+    "operation": "remove",
+    "start": 227,
+  },
+]
+`;

@@ -2,11 +2,33 @@ const get = require('lodash.get')
 const traverse = require('traverse')
 const {insert, remove} = require("./stringUtils");
 const THIS_REPLACER = 'self'
+const SUPER_COMPONENTS = ['Component', 'PureComponent']
 
 function classToFunctional(classDeclaration) {
-  if (get(classDeclaration, ['superClass', 'type']) !== 'MemberExpression') return
-  if (get(classDeclaration, ['superClass', 'object', 'name']) !== 'React') return
-  if (get(classDeclaration, ['superClass', 'property', 'name']) !== 'Component') return
+
+  let isReactComponent = false
+  switch (get(classDeclaration, ['superClass', 'type'])) {
+    case 'MemberExpression':
+      let superObject = get(classDeclaration, ['superClass', 'object', 'name'])
+      let superProperty = get(classDeclaration, ['superClass', 'property', 'name'])
+
+      isReactComponent = superObject
+        && superProperty
+        && superObject === "React"
+        && SUPER_COMPONENTS.includes(superProperty)
+      break;
+
+    case 'Identifier':
+      let superIdentifier = get(classDeclaration, ['superClass', 'name'])
+      isReactComponent = superIdentifier
+        && SUPER_COMPONENTS.includes(superIdentifier)
+      break
+
+    default:
+      isReactComponent = false
+  }
+
+  if (!isReactComponent) return
 
   let className = get(classDeclaration, ['id', 'name'], 'ReactComponent')
   let classStart = get(classDeclaration, ['start'])
