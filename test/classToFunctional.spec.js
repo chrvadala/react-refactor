@@ -33,6 +33,17 @@ function ClassComp(props){
 }
 `
 
+const genericClassTemplate = `
+class ClassComp extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  doSomething(){
+    //doSomething()
+  }
+}
+`.trim()
+
 describe('classToFunctional', () => {
   it('should convert class to functional comp', () => {
     let classComp = parse(classTemplate)
@@ -40,5 +51,10 @@ describe('classToFunctional', () => {
     expect(patch).toMatchSnapshot()
     let output = patchString(classTemplate, patch)
     expect(removeSpaces(output)).toBe(removeSpaces(output))
+  })
+  it('should return false', () => {
+    let classComp = parse(genericClassTemplate)
+    let patch = classToFunctional(classComp.body[0])
+    expect(patch).toBeFalsy()
   })
 })

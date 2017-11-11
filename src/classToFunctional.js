@@ -4,9 +4,9 @@ const {insert, remove} = require("./stringUtils");
 const THIS_REPLACER = 'self'
 
 function classToFunctional(classDeclaration) {
-  if (get(classDeclaration, ['superClass', 'type']) !== 'MemberExpression') return false
-  if (get(classDeclaration, ['superClass', 'object', 'name']) !== 'React') return false
-  if (get(classDeclaration, ['superClass', 'property', 'name']) !== 'Component') return false
+  if (get(classDeclaration, ['superClass', 'type']) !== 'MemberExpression') return
+  if (get(classDeclaration, ['superClass', 'object', 'name']) !== 'React') return
+  if (get(classDeclaration, ['superClass', 'property', 'name']) !== 'Component') return
 
   let className = get(classDeclaration, ['id', 'name'], 'ReactComponent')
   let classStart = get(classDeclaration, ['start'])
@@ -22,7 +22,7 @@ function classToFunctional(classDeclaration) {
     renderMethod = node
   })
 
-  if (!renderMethod) return false
+  if (!renderMethod) return
 
   let renderStart = get(renderMethod, ['body', 'start'])
   let renderEnd = get(renderMethod, ['body', 'end'])
