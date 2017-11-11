@@ -62,4 +62,22 @@ describe('patchString', () => {
     patch.push(insert(26, 'xx456xx'))
     expect(patchString(alphabet, patch)).toBe('CDEHIJKyy123yyMNOPQRSTUVWXYxx456xx')
   })
+
+  it('should throw expection', () => {
+    expect(() => {
+      patchString(alphabet, [{start: 20, end: 5}])
+    }).toThrowError('StartGTEndError')
+
+    expect(() => {
+      patchString(alphabet, [{start: 50}])
+    }).toThrowError('StartGTLengthError')
+
+    expect(() => {
+      patchString(alphabet, [insert(20, 'hei'), insert(19, 'ciao')])
+    }).toThrowError('PatchesUnsortedError')
+
+    expect(() => {
+      patchString(alphabet, [{operation: 'ciao', start: 20}])
+    }).toThrowError('UnsupportedOperationError')
+  })
 });
