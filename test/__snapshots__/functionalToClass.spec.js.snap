@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`functionalToClass should convert functional to class comp 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "class FunctionalComp extends React.Component {",
+    "start": 1,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "render()",
+    "start": 1,
+  },
+  Object {
+    "end": 31,
+    "operation": "remove",
+    "start": 1,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "
+let props = this.props;",
+    "start": 32,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "}",
+    "start": 77,
+  },
+]
+`;
+
+exports[`functionalToClass should convert functional to class comp with destructuring 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "class FunctionalComp extends React.Component {",
+    "start": 1,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "render()",
+    "start": 1,
+  },
+  Object {
+    "end": 36,
+    "operation": "remove",
+    "start": 1,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "
+let {abc, cde} = this.props;",
+    "start": 37,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "}",
+    "start": 76,
+  },
+]
+`;

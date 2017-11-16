@@ -1,0 +1,61 @@
+const {patchString} = require("../src/stringUtils");
+const {removeSpaces} = require("./testUtils");
+const {parse} = require('../src/parser')
+const {functionalToClass} = require('../src/functionalToClass')
+
+const functionalTemplate1 = `
+function FunctionalComp(props){
+  return (
+    <div>{props.abc}</div>
+  );
+}
+`
+const classTemplate1 = `
+class FunctionalComp extends React.Component {
+  render() {
+    let props = this.props;
+    return (
+      <div>{props.abc}</div>
+    );
+  }
+}
+`.trim()
+
+const functionalTemplate2 = `
+function FunctionalComp({abc, cde}){
+  return (
+    <div>{abc}</div>
+  );
+}
+`
+const classTemplate2 = `
+class FunctionalComp extends React.Component {
+  render() {
+    let {abc, cde} = this.props;
+    return (
+      <div>{abc}</div>
+    );
+  }
+}
+`.trim()
+
+
+describe('functionalToClass', () => {
+  it('should convert functional to class comp', () => {
+    let classComp = parse(functionalTemplate1)
+    let patch = functionalToClass(functionalTemplate1, classComp.body[0])
+    expect(Array.isArray(patch)).toBe(true)
+    expect(patch).toMatchSnapshot()
+    let output = patchString(functionalTemplate1, patch)
+    expect(removeSpaces(output)).toBe(removeSpaces(classTemplate1))
+  })
+
+  it('should convert functional to class comp with destructuring', () => {
+    let classComp = parse(functionalTemplate2)
+    let patch = functionalToClass(functionalTemplate2, classComp.body[0])
+    expect(Array.isArray(patch)).toBe(true)
+    expect(patch).toMatchSnapshot()
+    let output = patchString(functionalTemplate2, patch)
+    expect(removeSpaces(output)).toBe(removeSpaces(classTemplate2))
+  })
+})
