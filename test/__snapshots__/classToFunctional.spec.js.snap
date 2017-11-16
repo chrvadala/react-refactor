@@ -49,10 +49,15 @@ Array [
     "operation": "remove",
     "start": 223,
   },
+  Object {
+    "end": 257,
+    "operation": "remove",
+    "start": 255,
+  },
 ]
 `;
 
-exports[`classToFunctional should support Component 1`] = `
+exports[`classToFunctional should supports different superclass should support Component 1`] = `
 Array [
   Object {
     "operation": "insert",
@@ -101,10 +106,15 @@ Array [
     "operation": "remove",
     "start": 217,
   },
+  Object {
+    "end": 251,
+    "operation": "remove",
+    "start": 249,
+  },
 ]
 `;
 
-exports[`classToFunctional should support PureComponent 1`] = `
+exports[`classToFunctional should supports different superclass should support PureComponent 1`] = `
 Array [
   Object {
     "operation": "insert",
@@ -153,10 +163,15 @@ Array [
     "operation": "remove",
     "start": 221,
   },
+  Object {
+    "end": 255,
+    "operation": "remove",
+    "start": 253,
+  },
 ]
 `;
 
-exports[`classToFunctional should support React.PureComponent 1`] = `
+exports[`classToFunctional should supports different superclass should support React.PureComponent 1`] = `
 Array [
   Object {
     "operation": "insert",
@@ -204,6 +219,11 @@ Array [
     "end": 231,
     "operation": "remove",
     "start": 227,
+  },
+  Object {
+    "end": 261,
+    "operation": "remove",
+    "start": 259,
   },
 ]
 `;

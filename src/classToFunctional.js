@@ -4,7 +4,7 @@ const {insert, remove} = require("./stringUtils");
 const THIS_REPLACER = 'self'
 const SUPER_COMPONENTS = ['Component', 'PureComponent']
 
-function classToFunctional(classDeclaration) {
+function classToFunctional(source, classDeclaration) {
 
   //check if is a React component
   let isReactComponent;
@@ -60,6 +60,7 @@ function classToFunctional(classDeclaration) {
     patch.push(insert(node.start, THIS_REPLACER))
     patch.push(remove(node.start, node.end))
   })
+  patch.push(remove(renderEnd, classEnd))
 
   //patch
   return patch

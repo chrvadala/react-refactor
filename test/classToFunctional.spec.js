@@ -23,13 +23,13 @@ class ClassComp extends React.Component {
 
 const functionalTemplate = `
 function ClassComp(props){
-  let self = {props}
+  let self = {props};
   
   let {def} = self.props
   let {props: {ghi}} = self
   return (
     <div>{self.props.abc}</div>
-  )
+  );
 }
 `
 
@@ -47,47 +47,34 @@ class ClassComp extends React.Component {
 describe('classToFunctional', () => {
   it('should convert class to functional comp', () => {
     let classComp = parse(classTemplate)
-    let patch = classToFunctional(classComp.body[0])
+    let patch = classToFunctional(classTemplate, classComp.body[0])
     expect(Array.isArray(patch)).toBe(true)
     expect(patch).toMatchSnapshot()
     let output = patchString(classTemplate, patch)
-    expect(removeSpaces(output)).toBe(removeSpaces(output))
+    expect(removeSpaces(output)).toBe(removeSpaces(functionalTemplate))
   })
   it('should return false', () => {
     let classComp = parse(genericClassTemplate)
-    let patch = classToFunctional(classComp.body[0])
+    let patch = classToFunctional(classTemplate, classComp.body[0])
     expect(patch).toBeFalsy()
   })
-  it('should support React.PureComponent', () => {
-    let classCompVariant = classTemplate.replace('React.Component', 'React.PureComponent')
 
-    let classComp = parse(classCompVariant)
-    let patch = classToFunctional(classComp.body[0])
-    expect(Array.isArray(patch)).toBe(true)
-    expect(patch).toMatchSnapshot()
-    let output = patchString(classTemplate, patch)
-    expect(removeSpaces(output)).toBe(removeSpaces(output))
-  })
-
-  it('should support PureComponent', () => {
-    let classCompVariant = classTemplate.replace('React.Component', 'PureComponent')
-
-    let classComp = parse(classCompVariant)
-    let patch = classToFunctional(classComp.body[0])
-    expect(Array.isArray(patch)).toBe(true)
-    expect(patch).toMatchSnapshot()
-    let output = patchString(classTemplate, patch)
-    expect(removeSpaces(output)).toBe(removeSpaces(output))
-  })
-
-  it('should support Component', () => {
-    let classCompVariant = classTemplate.replace('React.Component', 'Component')
-
-    let classComp = parse(classCompVariant)
-    let patch = classToFunctional(classComp.body[0])
-    expect(Array.isArray(patch)).toBe(true)
-    expect(patch).toMatchSnapshot()
-    let output = patchString(classTemplate, patch)
-    expect(removeSpaces(output)).toBe(removeSpaces(output))
+  describe('should supports different superclass', () => {
+    [
+      'React.PureComponent',
+      'PureComponent',
+      'Component',
+    ].forEach(superClass => {
+      it(`should support ${superClass}`, () => {
+        let classCompVariant = classTemplate.replace('React.Component', superClass)
+        let functionalCompVariant = functionalTemplate.replace('React.Component', superClass)
+        let classComp = parse(classCompVariant)
+        let patch = classToFunctional(classTemplate, classComp.body[0])
+        expect(Array.isArray(patch)).toBe(true)
+        expect(patch).toMatchSnapshot()
+        let output = patchString(classCompVariant, patch)
+        expect(removeSpaces(output)).toBe(removeSpaces(functionalCompVariant))
+      })
+    })
   })
 })
