@@ -1,0 +1,46 @@
+class funcComp extends React.Component {
+  render() {
+    let props = this.props;
+    return <div>ciao</div>
+  }
+}
+
+export default class funcCompExport extends React.Component {
+  render() {
+    let props = this.props;
+    return <div>ciao</div>
+  }
+}
+
+function ClassComp(props) {
+  let self = {props};
+
+  let {def} = self.props
+  let {props: {ghi}} = self
+  return (
+    <div>{self.props.abc}</div>
+  );
+}
+
+export function ClassCompExport(props) {
+  let self = {props};
+
+  let {def} = self.props
+  let {props: {ghi}} = self
+  return (
+    <div>{self.props.abc}</div>
+  );
+}
+
+function simpleFunc(){
+  return 'ciao'
+}
+
+class simpleClass{
+  do(){
+    return 'ciao'
+  }
+}
+
+export {funcComp}
+export {ClassComp}

@@ -1,0 +1,56 @@
+function funcComp(props) {
+  return <div>ciao</div>
+}
+
+export default function funcCompExport(props) {
+  return <div>ciao</div>
+}
+
+class ClassComp extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  doSomething() {
+    //doSomething()
+  }
+
+  render() {
+    let {def} = this.props
+    let {props: {ghi}} = this
+    return (
+      <div>{this.props.abc}</div>
+    );
+  }
+}
+
+export class ClassCompExport extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  doSomething() {
+    //doSomething()
+  }
+
+  render() {
+    let {def} = this.props
+    let {props: {ghi}} = this
+    return (
+      <div>{this.props.abc}</div>
+    );
+  }
+}
+
+function simpleFunc(){
+  return 'ciao'
+}
+
+class simpleClass{
+  do(){
+    return 'ciao'
+  }
+}
+
+export {funcComp}
+export {ClassComp}
