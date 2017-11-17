@@ -1,3 +1,4 @@
+const {NotAReactComponent} = require("../src/errors");
 const {patchString} = require("../src/stringUtils");
 const {removeSpaces} = require("./testUtils");
 const {parse} = require('../src/parser')
@@ -39,6 +40,12 @@ class FunctionalComp extends React.Component {
 }
 `.trim()
 
+const genericFunction = `
+function testFunc(props){
+  return 'Saluti from Rome!'
+}
+`
+
 
 describe('functionalToClass', () => {
   it('should convert functional to class comp', () => {
@@ -57,5 +64,12 @@ describe('functionalToClass', () => {
     expect(patch).toMatchSnapshot()
     let output = patchString(functionalTemplate2, patch)
     expect(removeSpaces(output)).toBe(removeSpaces(classTemplate2))
+  })
+
+  it('should throw', () => {
+    let parsedFunc = parse(genericFunction)
+    expect(() => {
+      functionalToClass(genericFunction, parsedFunc.body[0])
+    }).toThrow(NotAReactComponent)
   })
 })

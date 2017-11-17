@@ -1,9 +1,21 @@
-const { getOrThrow} = require('./treeUtils')
+const traverse = require("traverse");
+const {NotAReactComponent} = require("./errors");
+const {getOrThrow} = require('./treeUtils')
 const {insert, remove} = require("./stringUtils");
 
 function functionalToClass(source, functionalDeclaration) {
 
   //check if is a React component (has at least 1 comp)
+  let isReactComponent = false;
+  traverse(functionalDeclaration)
+    .forEach(function () {
+      let {node, path} = this
+      let tail = path[path.length - 1]
+      if (tail !== 'type') return
+      if (node !== 'JSXElement') return
+      isReactComponent = true;
+    })
+  if (!isReactComponent) throw NotAReactComponent
 
 //detect component info
   let functionalName = getOrThrow(functionalDeclaration, ['id', 'name'], 'ReactComponent')
