@@ -1,3 +1,4 @@
+const {NotAReactComponent} = require("../src/errors");
 const {patchString} = require("../src/stringUtils");
 const {removeSpaces} = require("./testUtils");
 const {classToFunctional} = require('../src/classToFunctional')
@@ -53,10 +54,11 @@ describe('classToFunctional', () => {
     let output = patchString(classTemplate, patch)
     expect(removeSpaces(output)).toBe(removeSpaces(functionalTemplate))
   })
-  it('should return false', () => {
+  it('should throw exception', () => {
     let classComp = parse(genericClassTemplate)
-    let patch = classToFunctional(classTemplate, classComp.body[0])
-    expect(patch).toBeFalsy()
+    expect(() => {
+      classToFunctional(classTemplate, classComp.body[0])
+    }).toThrow(NotAReactComponent)
   })
 
   describe('should supports different superclass', () => {

@@ -1,5 +1,6 @@
 const {get, getOrThrow} = require('./treeUtils')
 const traverse = require('traverse')
+const {NotAReactComponent} = require("./errors");
 const {insert, remove} = require("./stringUtils");
 const THIS_REPLACER = 'self'
 const SUPER_COMPONENTS = ['Component', 'PureComponent']
@@ -28,7 +29,7 @@ function classToFunctional(source, classDeclaration) {
     default:
       isReactComponent = false
   }
-  if (!isReactComponent) return
+  if (!isReactComponent) throw NotAReactComponent;
 
 
   //detect component info
@@ -45,7 +46,7 @@ function classToFunctional(source, classDeclaration) {
     if (get(node, ['key', 'name']) !== 'render') return
     renderMethod = node
   })
-  if (!renderMethod) return
+  if (!renderMethod) throw NotAReactComponent;
   let renderStart = getOrThrow(renderMethod, ['body', 'start'])
   let renderEnd = getOrThrow(renderMethod, ['body', 'end'])
 
