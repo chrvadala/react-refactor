@@ -1,4 +1,4 @@
-const get = require('lodash.get')
+const {get, getOrThrow} = require('./treeUtils')
 const traverse = require('traverse')
 const {insert, remove} = require("./stringUtils");
 const THIS_REPLACER = 'self'
@@ -32,22 +32,22 @@ function classToFunctional(source, classDeclaration) {
 
 
   //detect component info
-  let className = get(classDeclaration, ['id', 'name'], 'ReactComponent')
-  let classStart = get(classDeclaration, ['start'])
-  let classEnd = get(classDeclaration, ['end'])
-  let classBody = get(classDeclaration, ['body'])
+  let className = getOrThrow(classDeclaration, ['id', 'name'], 'ReactComponent')
+  let classStart = getOrThrow(classDeclaration, ['start'])
+  let classEnd = getOrThrow(classDeclaration, ['end'])
+  let classBody = getOrThrow(classDeclaration, ['body'])
 
 
   //detect render method
   let renderMethod;
-  get(classBody, ['body']).forEach(node => {
+  getOrThrow(classBody, ['body']).forEach(node => {
     if (get(node, ['type']) !== 'ClassMethod') return
     if (get(node, ['key', 'name']) !== 'render') return
     renderMethod = node
   })
   if (!renderMethod) return
-  let renderStart = get(renderMethod, ['body', 'start'])
-  let renderEnd = get(renderMethod, ['body', 'end'])
+  let renderStart = getOrThrow(renderMethod, ['body', 'start'])
+  let renderEnd = getOrThrow(renderMethod, ['body', 'end'])
 
 
   //generates patch to convert it from class to func
