@@ -15,9 +15,11 @@
     "url": "https://github.com/chrvadala/react-refactor/issues"
   },
   "homepage": "https://github.com/chrvadala/react-refactor#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
   "dependencies": {
-    "jest": "^21.2.1",
-    "lodash.get": "^4.4.2",
+    "babylon": "^6.18.0",
     "traverse": "^0.6.6"
   }
 }
