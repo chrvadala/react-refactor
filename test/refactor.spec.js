@@ -29,10 +29,14 @@ describe('refactor', () => {
   it.only('should convert', () => {
     let parsedExample = parseFile(fixture('example.jsx.txt'))
     let {patch, skipped} = execRefactor(example, parsedExample)
+
     expect(Array.isArray(patch)).toBe(true)
+    expect(Array.isArray(skipped)).toBe(true)
     expect(patch).toMatchSnapshot()
     expect(skipped).toMatchSnapshot()
+
     let output = patchString(example, patch)
-    expect(removeSpaces(output)).toBe(removeSpaces(refactoredExample))
+    expect(removeSpaces(output))
+      .toBe(removeSpaces(refactoredExample))
   })
 })
