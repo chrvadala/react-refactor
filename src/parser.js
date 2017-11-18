@@ -10,16 +10,10 @@ const parserOpt = {
   ]
 }
 
-function parseFile(filename){
-  let code = fs.readFileSync(filename, UTF8)
-  return parse(code)
-}
-
 function parse(code){
   return babylon.parse(code, parserOpt).program
 }
 
 module.exports = {
-  parseFile,
   parse,
 }

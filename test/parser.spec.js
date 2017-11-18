@@ -1,14 +1,34 @@
 const path = require("path");
-const {parseFile} = require('../src/parser')
+const fs = require('fs')
+const {parse} = require('../src/parser')
 const fixture = filename => path.join(__dirname, '__fixtures__', filename)
+
+
+let classComp;
+beforeAll(done => {
+  fs.readFile(fixture('ClassComp.jsx.txt'), 'utf8', (err, data) => {
+    if (err) throw new Error()
+    classComp = data
+    done()
+  })
+})
+
+let funcComp;
+beforeAll(done => {
+  fs.readFile(fixture('FuncComp.jsx.txt'), 'utf8', (err, data) => {
+    if (err) throw new Error()
+    funcComp = data
+    done()
+  })
+})
 
 describe('parser', () => {
   it('should parse Class file', () => {
-    let classComp = parseFile(fixture('ClassComp.jsx.txt'))
-    expect(classComp).toMatchSnapshot()
+    let parsedClass = parse(classComp)
+    expect(parsedClass).toMatchSnapshot()
   })
   it('should parse Func file', () => {
-    let funcComp = parseFile(fixture('FuncComp.jsx.txt'))
-    expect(funcComp).toMatchSnapshot()
+    let parsedFunc = parse(funcComp)
+    expect(parsedFunc).toMatchSnapshot()
   })
 })
