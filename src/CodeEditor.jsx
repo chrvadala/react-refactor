@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import "codemirror/lib/codemirror.css";
-import "codemirror/theme/dracula.css";
 import "codemirror/mode/javascript/javascript.js";
 import "codemirror/mode/jsx/jsx.js";
 import "codemirror/addon/selection/active-line.js";
@@ -17,7 +16,6 @@ const EditorOpt = {
   lineNumbers: true,
   styleActiveLine: true,
   matchBrackets: true,
-  theme: 'dracula',
 }
 
 class CodeEditor extends React.PureComponent {
@@ -33,7 +31,7 @@ class CodeEditor extends React.PureComponent {
 
     let opt = {...EditorOpt, readOnly}
     this.CodeEditor = CodeMirror.fromTextArea(this.Editor, opt);
-
+    this.CodeEditor.setSize("100%", "100%");
     if (!readOnly) {
       this.CodeEditor.on('changes', instance => onChange(instance.getValue()))
     }

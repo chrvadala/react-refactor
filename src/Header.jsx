@@ -1,29 +1,29 @@
 import React from 'react';
 
 const S_HEADER = {
-  display: 'block',
-  padding: '40px 30px',
-  width: '100%',
-
   backgroundColor: '#2a2d33',
+}
+
+const S_TITLE = {
+  padding: "10px 20px",
   color: '#fff',
-  fontSize: '2.1em',
+  fontSize: '1.3em',
   margin: 0,
-  fontWeight: 100,
+  fontWeight: "bold",
 }
 
 const S_SUBTITLE = {
-  color: '#b8b8bc',
-  fontSize: '0.6em',
-  paddingLeft: '0.7em',
+  fontSize: "0.8em",
+  fontWeight: 100,
 }
 
 function Header(props) {
   return (
-    <h1 style={S_HEADER}>
-      React Refactor
-      <span style={S_SUBTITLE}>Convert ...</span>
-    </h1>
+    <div style={S_HEADER}>
+      <h1 style={S_TITLE}>
+        React Refactor - <span style={S_SUBTITLE}>Convert your React Class Component to Functional Component and viceversa</span>
+      </h1>
+    </div>
   );
 }
 

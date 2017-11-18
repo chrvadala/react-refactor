@@ -4,14 +4,17 @@ import ReactRefactor from 'react-refactor'
 
 const S_CONTENT = {
   display: 'flex',
-  alignContent: 'strech',
+  alignContent: 'stretch',
   justifyContent: 'center',
   padding: "0 10px",
+  alignItems: "stretch",
+  height: "100%",
 }
 
 const S_COL = {
   width: '50%',
-  padding: "20px",
+  border: "1px solid #2085c1",
+  margin: 10,
 }
 
 class Content extends React.Component {
