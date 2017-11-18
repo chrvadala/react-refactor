@@ -1,4 +1,4 @@
-const {patchString, INSERT, REMOVE, insert, remove} = require('../src/stringUtils');
+const {patchString, INSERT, REMOVE, insert, remove} = require('../lib/stringUtils');
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 describe('patchString', () => {

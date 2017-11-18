@@ -1,8 +1,8 @@
-const {NotAReactComponent} = require("../src/errors");
-const {patchString} = require("../src/stringUtils");
+const {NotAReactComponent} = require("../lib/errors");
+const {patchString} = require("../lib/stringUtils");
 const {removeSpaces} = require("./testUtils");
-const {classToFunctional} = require('../src/classToFunctional')
-const {parse} = require('../src/parser')
+const {classToFunctional} = require('../lib/classToFunctional')
+const {parse} = require('../lib/parser')
 
 const classTemplate = `
 class ClassComp extends React.Component {

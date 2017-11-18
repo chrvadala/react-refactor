@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require('fs')
-const {parse} = require('../src/parser')
+const {parse} = require('../lib/parser')
 const fixture = filename => path.join(__dirname, '__fixtures__', filename)
 
 
