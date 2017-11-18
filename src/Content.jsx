@@ -22,7 +22,13 @@ class Content extends React.Component {
   }
 
   update(source) {
-    let {output} = ReactRefactor.execRefactor(source)
+    let output;
+    try {
+      ({output} = ReactRefactor.execRefactor(source))
+    } catch (err) {
+      this.setState({refactoredCode: '// Source file can\'t be refactored'})
+      console.warn(err)
+    }
     this.setState({refactoredCode: output})
   }
 
