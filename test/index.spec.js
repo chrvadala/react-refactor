@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs")
 const {removeSpaces} = require("./testUtils");
 const {patchString} = require("../src/stringUtils");
-const {execRefactor} = require("../src/refactor");
+const {execRefactor} = require("../src/index");
 const {parseFile} = require('../src/parser')
 const fixture = filename => path.join(__dirname, '__fixtures__', filename)
 
