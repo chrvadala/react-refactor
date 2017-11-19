@@ -23,12 +23,12 @@ class Content extends React.Component {
     super(props)
     this.state = {
       code: defaultSource,
-      refactoredCode: ""
+      refactoredCode: this.update(defaultSource, true)
     }
     this.update = this.update.bind(this)
   }
 
-  update(source) {
+  update(source, skipStateUpdate = false) {
     let output;
     try {
       ({output} = ReactRefactor.execRefactor(source))
@@ -37,7 +37,8 @@ class Content extends React.Component {
       console.warn(err)
       return;
     }
-    this.setState({refactoredCode: output})
+    if(!skipStateUpdate) this.setState({refactoredCode: output})
+    return output;
   }
 
   render() {
