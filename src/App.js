@@ -16,8 +16,8 @@ const S_App = {
 class App extends Component {
   render() {
     return [
-      <GithubRibbon url={'https://github.com/chrvadala/react-refactor'}/>,
-      <div className="App" style={S_App}>
+      <GithubRibbon key='ribbon' url={'https://github.com/chrvadala/react-refactor'}/>,
+      <div key='app' style={S_App}>
         <Header/>
         <Introduction/>
         <Content/>
