@@ -26,6 +26,7 @@
   "dependencies": {
     "babylon": "^6.18.0",
     "codemirror": "^5.31.0",
+    "js-beautify": "^1.7.4",
     "traverse": "^0.6.6"
   }
 }
