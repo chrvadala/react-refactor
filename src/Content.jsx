@@ -35,6 +35,7 @@ class Content extends React.Component {
     } catch (err) {
       this.setState({refactoredCode: '// Source file can\'t be refactored'})
       console.warn(err)
+      return;
     }
     this.setState({refactoredCode: output})
   }
