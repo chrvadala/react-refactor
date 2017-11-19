@@ -47,6 +47,7 @@ class CodeEditor extends React.PureComponent {
     return (
       <textarea
         ref={Editor => this.Editor = Editor}
+        defaultValue={this.props.value}
         style={S_TEXAREA}/>
     );
   }

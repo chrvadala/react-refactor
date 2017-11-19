@@ -1,6 +1,7 @@
 import React from 'react';
 import CodeEditor from "./CodeEditor";
 import ReactRefactor from 'react-refactor'
+import defaultSource from "./defaultSource";
 
 const S_CONTENT = {
   display: 'flex',
@@ -20,7 +21,10 @@ const S_COL = {
 class Content extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {code: "", refactoredCode: ""}
+    this.state = {
+      code: defaultSource,
+      refactoredCode: ""
+    }
     this.update = this.update.bind(this)
   }
 
