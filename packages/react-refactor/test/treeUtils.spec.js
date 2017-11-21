@@ -1,4 +1,4 @@
-const {getOrThrow, get} = require('../lib/treeUtils')
+const {getOrThrow, get} = require('../src/treeUtils')
 
 const obj = {
   a: 10,

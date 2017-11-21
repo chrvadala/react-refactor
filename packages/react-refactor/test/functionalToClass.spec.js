@@ -1,8 +1,8 @@
-const {NotAReactComponent} = require("../lib/errors");
-const {patchString} = require("../lib/stringUtils");
+const {NotAReactComponent} = require("../src/errors");
+const {patchString} = require("../src/stringUtils");
 const {removeSpaces} = require("./testUtils");
-const {parse} = require('../lib/parser')
-const {functionalToClass} = require('../lib/functionalToClass')
+const {parse} = require('../src/parser')
+const {functionalToClass} = require('../src/functionalToClass')
 
 const functionalTemplate1 = `
 function FunctionalComp(props){
