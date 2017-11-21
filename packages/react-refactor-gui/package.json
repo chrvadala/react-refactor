@@ -1,0 +1,19 @@
+{
+  "name": "react-refactor-gui",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrvadala/react-refactor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrvadala/react-refactor/issues"
+  },
+  "homepage": "https://github.com/chrvadala/react-refactor#readme"
+}
