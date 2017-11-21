@@ -1,11 +1,11 @@
-const {patchString} = require("./stringUtils");
-const {parse, beautify} = require("./parser");
-const {classToFunctional} = require("./classToFunctional");
-const {functionalToClass} = require("./functionalToClass");
-const {getOrThrow, get} = require("./treeUtils");
-const {NotAProgram} = require('./errors')
+import {patchString} from "./stringUtils"
+import {parse, beautify} from "./parser"
+import {classToFunctional} from "./classToFunctional"
+import {functionalToClass} from "./functionalToClass"
+import {getOrThrow, get} from "./treeUtils"
+import {NotAProgram} from './errors'
 
-function execRefactor(source) {
+export function execRefactor(source) {
   let programDeclaration = parse(source)
   let type = getOrThrow(programDeclaration, ['type'])
   let body = getOrThrow(programDeclaration, ['body'])
@@ -59,8 +59,4 @@ function execRefactor(source) {
   }
 
   return {patch, skipped, output}
-}
-
-module.exports = {
-  execRefactor,
 }

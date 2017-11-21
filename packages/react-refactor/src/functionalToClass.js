@@ -1,9 +1,9 @@
-const traverse = require("traverse");
-const {NotAReactComponent} = require("./errors");
-const {getOrThrow} = require('./treeUtils')
-const {insert, remove} = require("./stringUtils");
+import traverse from "traverse"
+import {NotAReactComponent} from "./errors"
+import {getOrThrow} from './treeUtils'
+import {insert, remove} from "./stringUtils"
 
-function functionalToClass(source, functionalDeclaration) {
+export function functionalToClass(source, functionalDeclaration) {
 
   //check if is a React component (has at least 1 comp)
   let isReactComponent = false;
@@ -39,6 +39,3 @@ function functionalToClass(source, functionalDeclaration) {
   return patch
 }
 
-module.exports = {
-  functionalToClass
-}

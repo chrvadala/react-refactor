@@ -1,15 +1,15 @@
-const INSERT = 'insert';
-const REMOVE = 'remove';
+export const INSERT = 'insert';
+export const REMOVE = 'remove';
 
-const insert = (start, payload) => ({operation: INSERT, start, payload})
-const remove = (start, end) => ({operation: REMOVE, start, end})
+export const insert = (start, payload) => ({operation: INSERT, start, payload})
+export const remove = (start, end) => ({operation: REMOVE, start, end})
 
 const StartGTEndError = new Error('Start offset should be greater than end offset')
 const StartGTLengthError = new Error('start offset should be lower than the size of the string')
 const PatchesUnsortedError = new Error('Patches should be provided sorted by start offset')
 const UnsupportedOperationError = new Error('Unsupported operation')
 
-function patchString(string, patch) {
+export function patchString(string, patch) {
   let cur = 0;
   let out = '';
 
@@ -46,10 +46,3 @@ function patchString(string, patch) {
   return out
 }
 
-module.exports = {
-  patchString,
-  INSERT,
-  REMOVE,
-  insert,
-  remove,
-};

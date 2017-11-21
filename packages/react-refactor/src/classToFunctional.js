@@ -1,11 +1,12 @@
-const {get, getOrThrow} = require('./treeUtils')
-const traverse = require('traverse')
-const {NotAReactComponent} = require("./errors");
-const {insert, remove} = require("./stringUtils");
+import {get, getOrThrow} from'./treeUtils'
+import traverse from 'traverse'
+import {NotAReactComponent} from "./errors"
+import {insert, remove} from "./stringUtils"
+
 const THIS_REPLACER = 'self'
 const SUPER_COMPONENTS = ['Component', 'PureComponent']
 
-function classToFunctional(source, classDeclaration) {
+export function classToFunctional(source, classDeclaration) {
 
   //check if is a React component
   let isReactComponent;
@@ -65,8 +66,4 @@ function classToFunctional(source, classDeclaration) {
 
   //patch
   return patch
-}
-
-module.exports = {
-  classToFunctional
 }

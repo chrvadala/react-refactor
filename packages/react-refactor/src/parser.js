@@ -1,8 +1,7 @@
-const babylon = require('babylon')
-const beautifyJS = require('js-beautify');
-const fs = require('fs')
+import {parse as astParser}  from 'babylon'
+import {js_beautify as codeBeautify} from "js-beautify"
 
-function parse(code) {
+export function parse(code) {
   const parserOpt = {
     sourceType: 'module',
     plugins: [
@@ -10,17 +9,12 @@ function parse(code) {
       "objectRestSpread",
     ]
   }
-  return babylon.parse(code, parserOpt).program
+  return astParser(code, parserOpt).program
 }
 
-function beautify(code) {
+export function beautify(code) {
   const beautifyOpt = {
     indent_size: 2, e4x: true
   }
-  return beautifyJS(code, beautifyOpt)
-}
-
-module.exports = {
-  parse,
-  beautify,
+  return codeBeautify(code, beautifyOpt)
 }
