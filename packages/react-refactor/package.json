@@ -1,7 +1,7 @@
 {
   "name": "react-refactor",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",

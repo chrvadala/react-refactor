@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
@@ -15,5 +14,12 @@
   "bugs": {
     "url": "https://github.com/chrvadala/react-refactor/issues"
   },
-  "homepage": "https://github.com/chrvadala/react-refactor#readme"
+  "homepage": "https://github.com/chrvadala/react-refactor#readme",
+  "devDependencies": {
+    "codemirror": "^5.31.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-refactor": "^0.0.0",
+    "react-scripts": "^1.0.17"
+  }
 }
