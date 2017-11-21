@@ -1,32 +1,5 @@
 {
-  "name": "react-refactor",
-  "version": "0.0.0",
-  "description": "",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "jest",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chrvadala/react-refactor.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chrvadala/react-refactor/issues"
-  },
-  "homepage": "https://github.com/chrvadala/react-refactor#readme",
-  "devDependencies": {
-    "jest": "^21.2.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-scripts": "^1.0.17"
-  },
-  "dependencies": {
-    "babylon": "^6.18.0",
-    "codemirror": "^5.31.0",
-    "js-beautify": "^1.7.4",
-    "traverse": "^0.6.6"
-  }
+	"devDependencies": {
+		"lerna": "^2.5.1"
+	}
 }
