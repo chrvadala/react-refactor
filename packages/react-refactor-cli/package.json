@@ -1,0 +1,27 @@
+{
+  "name": "react-refactor-cli",
+  "bin": {
+    "react-refactor": "./bin/react-refactor.js"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrvadala/react-refactor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrvadala/react-refactor/issues"
+  },
+  "homepage": "https://github.com/chrvadala/react-refactor#readme",
+  "dependencies": {
+    "yargs": "^10.0.3"
+  }
+}
