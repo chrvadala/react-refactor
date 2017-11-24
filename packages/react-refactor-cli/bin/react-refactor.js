@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const argv = require('../src/argv')
-const execRefactorOnFile = require('../src/command')
+const argv = require('../build/argv').default
+const command = require('../build/command').default
 
-execRefactorOnFile(argv._[0], argv)
+command(argv._[0], argv)

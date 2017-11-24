@@ -1,33 +1,26 @@
-const log = console.log;
+import fs from 'fs'
+const write = message => console.log(message)
 
-module.exports = function execRefactorOnFile(file, options) {
-  const {
-    clipboard = false,
-    output = null,
-  } = options;
+import {execRefactor} from 'react-refactor'
 
+export default createCommand(write, fs);
 
+export function createCommand(write, fs) {
+  return function command(file, options) {
+    const {
+      output = null,
+    } = options;
 
+    let source = fs.readFileSync(file, 'utf8')
+    let result = execRefactor(source)
 
-  console.log(file, clipboard, output)
+    if (output) {
+      fs.writeFileSync(output, result.output, 'utf8')
+      write('Output saved on file')
+      return
+    }
 
-
-  if(clipboard){
-
-
-
-    log('Output saved on clipboard')
+    write(result.output)
   }
-
-
-  if(output){
-
-
-
-
-    log('Output saved on file')
-  }
-
-
-
 }
+

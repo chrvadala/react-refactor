@@ -23,4 +23,4 @@ if (!argv._[0]) {
   process.exit(-1)
 }
 
-module.exports = argv
+export default argv

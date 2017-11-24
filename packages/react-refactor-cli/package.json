@@ -3,16 +3,22 @@
   "bin": {
     "react-refactor": "./bin/react-refactor.js"
   },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir build"
+  },
   "engines": {
     "node": ">=6.0.0"
   },
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrvadala/react-refactor.git"
@@ -22,6 +28,7 @@
   },
   "homepage": "https://github.com/chrvadala/react-refactor#readme",
   "dependencies": {
+    "react-refactor": "^0.0.0",
     "yargs": "^10.0.3"
   }
 }
