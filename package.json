@@ -10,6 +10,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "clean": "lerna run clean && lerna clean --yes",
+    "postinstall": "npm-run-all bootstrap build",
     "test:ci": "npm-run-all bootstrap build test"
   },
   "license": "MIT",
