@@ -7,11 +7,13 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "del-cli": "^1.1.0",
     "jest": "^21.2.1"
   },
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir build"
+    "build": "babel src --out-dir build",
+    "clean": "del build"
   },
   "engines": {
     "node": ">=6.0.0"
