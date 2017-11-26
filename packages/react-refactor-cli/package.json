@@ -31,6 +31,7 @@
   "homepage": "https://github.com/chrvadala/react-refactor#readme",
   "dependencies": {
     "react-refactor": "^0.0.0",
+    "update-notifier": "^2.3.0",
     "yargs": "^10.0.3"
   }
 }
