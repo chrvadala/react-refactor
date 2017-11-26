@@ -1,7 +1,8 @@
 {
   "name": "react-refactor-cli",
   "bin": {
-    "react-refactor": "./bin/react-refactor.js"
+    "react-refactor": "./bin/react-refactor.js",
+    "react-refactor-cli": "./bin/react-refactor.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
