@@ -14,7 +14,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src --out-dir build",
-    "clean": "del build"
+    "clean": "del build",
+    "prepublish": "npm-run-all build"
   },
   "engines": {
     "node": ">=6.0.0"

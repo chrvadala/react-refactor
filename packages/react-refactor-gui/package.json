@@ -7,8 +7,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "clean": "del build",
-    "test": "exit 0"
-
+    "test": "exit 0",
+    "prepublish": "npm-run-all build"
   },
   "repository": {
     "type": "git",
