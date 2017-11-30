@@ -13,10 +13,8 @@ function Introduction(props) {
   return (
     <div style={S_INTRODUCTION}>
       <p style={S_DESC}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-        make
-        a type specimen book.
+        How many times have you converted a <strong>React Class component</strong> to a <strong>React Functional component</strong> and vice-versa? It’s a boring task, and we know...  "<em>developers don’t like boring tasks</em>".
+        Thanks to <strong>React Refactor</strong> you can convert any React component from and to Class component.
       </p>
     </div>
   );

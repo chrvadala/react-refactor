@@ -7,8 +7,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "clean": "del build",
-    "test": "exit 0",
-    "prepublish": "npm-run-all build"
+    "prepublish": "npm-run-all build",
+    "deploy": "gh-pages -m 'Updates gh-pages' -d ./build"
   },
   "repository": {
     "type": "git",

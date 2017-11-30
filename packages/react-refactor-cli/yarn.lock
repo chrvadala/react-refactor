@@ -2547,6 +2547,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-refactor@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/react-refactor/-/react-refactor-0.0.0.tgz#a6b922c36da40f3ed6c6a26a4cd9ac6bf848bf15"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
