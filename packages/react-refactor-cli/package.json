@@ -15,12 +15,12 @@
     "test": "jest",
     "build": "babel src --out-dir build",
     "clean": "del build",
-    "prepublish": "npm-run-all build"
+    "prepare": "npm-run-all build"
   },
   "engines": {
     "node": ">=6.0.0"
   },
-  "version": "0.0.0",
+  "version": "0.0.15",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/chrvadala/react-refactor#readme",
   "dependencies": {
-    "react-refactor": "^0.0.0",
+    "react-refactor": "^0.0.15",
     "update-notifier": "^2.3.0",
     "yargs": "^10.0.3"
   }

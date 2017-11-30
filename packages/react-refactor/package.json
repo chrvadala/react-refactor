@@ -1,7 +1,8 @@
 {
   "name": "react-refactor",
-  "version": "0.0.0",
+  "version": "0.0.15",
   "main": "build/index.js",
+  "module": "build/index.js",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -14,7 +15,7 @@
     "test": "jest",
     "build": "babel src --out-dir build",
     "clean": "del build",
-    "prepublish": "npm-run-all build"
+    "prepare": "npm-run-all build"
   },
   "dependencies": {
     "babylon": "^6.18.0",
