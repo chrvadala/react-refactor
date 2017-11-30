@@ -1,13 +1,13 @@
 {
   "name": "react-refactor-gui",
-  "version": "0.0.0",
+  "version": "0.0.11",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "clean": "del build",
-    "prepublish": "npm-run-all build",
+    "prepare": "npm-run-all build",
     "deploy": "gh-pages -m 'Updates gh-pages' -d ./build"
   },
   "repository": {
@@ -23,7 +23,7 @@
     "del-cli": "^1.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-refactor": "^0.0.0",
+    "react-refactor": "^0.0.11",
     "react-scripts": "^1.0.17"
   }
 }
