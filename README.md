@@ -8,7 +8,7 @@ It's made with Babel Babylon and thanks to string replacing it’s able to insta
 
 **React Refactor** is available in three different packages: Library, CLI, Web Interface
 
-##Library
+## Library
 [![npm](https://img.shields.io/npm/v/react-refactor.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/react-refactor)
 [![Downloads](https://img.shields.io/npm/dm/react-refactor.svg)](https://www.npmjs.com/package/react-refactor)
 The package *react-refactor* offers methods to programmatically convert a component. You can use it to make new useful utilities that integrate this ability.
@@ -18,7 +18,7 @@ let {output} = execRefactor(source)
 ````
 
 
-##CLI
+## CLI
 [![npm](https://img.shields.io/npm/v/react-refactor-cli.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/react-refactor-cli)
 [![Downloads](https://img.shields.io/npm/dm/react-refactor-cli.svg)](https://www.npmjs.com/package/react-refactor-cli)
 You can globally install the package **react-refactor-cli** and use it to convert your component on the fly.
@@ -27,7 +27,7 @@ $ yarn global add react-refactor-cli
 $ react-refactor [--output <filename>] <filename>
 ````
 
-##Web interface
+## Web interface
 You can avoid installing anything and convert your component through the web interface available at [https://chrvadala.github.io/react-refactor/](https://chrvadala.github.io/react-refactor/)
 
 ## Changelog
