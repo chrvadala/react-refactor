@@ -4,6 +4,7 @@
   "main": "build/index.js",
   "module": "build/index.js",
   "license": "MIT",
+  "description": "Convert your React Class Component to Functional Component and vice-versa",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

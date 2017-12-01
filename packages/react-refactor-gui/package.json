@@ -1,7 +1,7 @@
 {
   "name": "react-refactor-gui",
   "version": "0.0.16",
-  "main": "index.js",
+  "description": "Convert your React Class Component to Functional Component and vice-versa",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",

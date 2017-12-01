@@ -1,5 +1,6 @@
 {
   "name": "react-refactor-cli",
+  "description": "Convert your React Class Component to Functional Component and vice-versa",
   "bin": {
     "react-refactor": "./bin/react-refactor.js",
     "react-refactor-cli": "./bin/react-refactor.js"
