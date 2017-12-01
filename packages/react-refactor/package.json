@@ -14,8 +14,9 @@
   "scripts": {
     "test": "jest",
     "build": "babel src --out-dir build",
-    "clean": "del build",
-    "prepare": "npm-run-all build"
+    "clean": "del build README.md",
+    "cp-readme": "cpy ../../README.md .",
+    "prepare": "npm-run-all build cp-readme"
   },
   "dependencies": {
     "babylon": "^6.18.0",

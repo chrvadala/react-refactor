@@ -4,3 +4,5 @@ coverage
 *.log
 build
 *.lerna_backup
+packages/*/README.md
+package-lock.json

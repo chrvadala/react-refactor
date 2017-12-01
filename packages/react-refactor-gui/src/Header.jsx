@@ -21,7 +21,7 @@ function Header(props) {
   return (
     <div style={S_HEADER}>
       <h1 style={S_TITLE}>
-        React Refactor - <span style={S_SUBTITLE}>Convert your React Class Component to Functional Component and viceversa</span>
+        React Refactor - <span style={S_SUBTITLE}>Convert your React Class Component to Functional Component and vice-versa</span>
       </h1>
     </div>
   );

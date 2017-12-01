@@ -8,6 +8,7 @@ const S_DESC = {
   margin: 0,
   fontSize: "0.9em",
   fontWeight: 100,
+  lineHeight: "1.5em",
 }
 
 function Introduction(props) {

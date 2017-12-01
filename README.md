@@ -47,8 +47,3 @@ yarn run clean
 
 ## Contributors
 - [chrvadala](https://github.com/chrvadala) (author)
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/chrvadala/react-refactor/badge.svg?style=beer-square)](https://beerpay.io/chrvadala/react-refactor)  [![Beerpay](https://beerpay.io/chrvadala/react-refactor/make-wish.svg?style=flat-square)](https://beerpay.io/chrvadala/react-refactor?focus=wish)
