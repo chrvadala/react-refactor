@@ -1,6 +1,6 @@
 {
   "name": "react-refactor-gui",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -23,7 +23,7 @@
     "del-cli": "^1.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-refactor": "^0.0.15",
+    "react-refactor": "^0.0.16",
     "react-scripts": "^1.0.17"
   }
 }
