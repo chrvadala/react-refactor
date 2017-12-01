@@ -1,4 +1,5 @@
 # react-refactor
+[![Build Status](https://travis-ci.org/chrvadala/react-refactor.svg?branch=master)](https://travis-ci.org/chrvadala/react-refactor)
 [![Beerpay](https://beerpay.io/chrvadala/react-refactor/badge.svg?style=beer)](https://beerpay.io/chrvadala/react-refactor)
 
 How many times have you converted a **React Class component** to a **React Functional component** and vice-versa? It’s a boring task, and we know...  "*developers don’t like boring tasks*".
