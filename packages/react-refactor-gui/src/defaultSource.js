@@ -1,7 +1,4 @@
 export default `
-// paste your code here 
-
-
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }

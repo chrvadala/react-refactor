@@ -21,7 +21,7 @@ function Footer(props) {
         href="https://github.com/chrvadala">chrvadala</a>
       </div>
 
-      <div>Install CLI tool <span style={{fontFamily: 'courier'}}>npm install react-refactor</span></div>
+      <div>Install CLI tool <span style={{fontFamily: 'courier'}}>npm i react-refactor -g</span></div>
     </div>
   );
 }

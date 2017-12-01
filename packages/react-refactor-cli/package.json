@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/chrvadala/react-refactor/issues"
   },
-  "homepage": "https://github.com/chrvadala/react-refactor#readme",
+  "homepage": "https://chrvadala.github.io/react-refactor",
   "dependencies": {
     "react-refactor": "^0.0.15",
     "update-notifier": "^2.3.0",

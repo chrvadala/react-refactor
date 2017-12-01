@@ -1,6 +1,6 @@
 import React from 'react';
 import CodeEditor from "./CodeEditor";
-import ReactRefactor from 'react-refactor'
+import * as ReactRefactor from 'react-refactor'
 import defaultSource from "./defaultSource";
 
 const S_CONTENT = {
