@@ -1,6 +1,6 @@
 {
   "name": "react-refactor-gui",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Convert your React Class Component to Functional Component and vice-versa",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "del-cli": "^1.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-refactor": "^0.0.16",
+    "react-refactor": "^0.0.17",
     "react-scripts": "^1.0.17"
   }
 }

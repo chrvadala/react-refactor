@@ -22,7 +22,7 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -34,7 +34,7 @@
   },
   "homepage": "https://chrvadala.github.io/react-refactor",
   "dependencies": {
-    "react-refactor": "^0.0.16",
+    "react-refactor": "^0.0.17",
     "update-notifier": "^2.3.0",
     "yargs": "^10.0.3"
   }
