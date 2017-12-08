@@ -61,3 +61,28 @@ let {abc, cde} = this.props;",
   },
 ]
 `;
+
+exports[`functionalToClass should convert functional to class comp without props 1`] = `
+Array [
+  Object {
+    "operation": "insert",
+    "payload": "class FunctionalComp extends React.Component {",
+    "start": 1,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "render()",
+    "start": 1,
+  },
+  Object {
+    "end": 26,
+    "operation": "remove",
+    "start": 1,
+  },
+  Object {
+    "operation": "insert",
+    "payload": "}",
+    "start": 70,
+  },
+]
+`;

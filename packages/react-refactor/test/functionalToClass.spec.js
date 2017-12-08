@@ -40,6 +40,23 @@ class FunctionalComp extends React.Component {
 }
 `.trim()
 
+const functionalTemplate3 = `
+function FunctionalComp(){
+  return (
+    <div>blablabla</div>
+  );
+}
+`
+const classTemplate3 = `
+class FunctionalComp extends React.Component {
+  render() {
+    return (
+      <div>blablabla</div>
+    );
+  }
+}
+`.trim()
+
 const genericFunction = `
 function testFunc(props){
   return 'Saluti from Rome!'
@@ -64,6 +81,15 @@ describe('functionalToClass', () => {
     expect(patch).toMatchSnapshot()
     let output = patchString(functionalTemplate2, patch)
     expect(removeSpaces(output)).toBe(removeSpaces(classTemplate2))
+  })
+
+  it('should convert functional to class comp without props', () => {
+    let classComp = parse(functionalTemplate3)
+    let patch = functionalToClass(functionalTemplate3, classComp.body[0])
+    expect(Array.isArray(patch)).toBe(true)
+    expect(patch).toMatchSnapshot()
+    let output = patchString(functionalTemplate3, patch)
+    expect(removeSpaces(output)).toBe(removeSpaces(classTemplate3))
   })
 
   it('should throw', () => {

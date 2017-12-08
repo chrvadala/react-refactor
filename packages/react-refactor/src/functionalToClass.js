@@ -22,9 +22,13 @@ export function functionalToClass(source, functionalDeclaration) {
   let functionalStart = getOrThrow(functionalDeclaration, ['start'])
   let functionalEnd = getOrThrow(functionalDeclaration, ['end'])
 
-  let paramsStart = getOrThrow(functionalDeclaration, ['params', 0, 'start'])
-  let paramsEnd = getOrThrow(functionalDeclaration, ['params', 0, 'end'])
-  let paramsCode = source.substring(paramsStart, paramsEnd)
+  let hasParams = getOrThrow(functionalDeclaration, ['params']).length > 0;
+  let paramsCode;
+  if(hasParams) {
+    let paramsStart = getOrThrow(functionalDeclaration, ['params', 0, 'start'])
+    let paramsEnd = getOrThrow(functionalDeclaration, ['params', 0, 'end'])
+    paramsCode = source.substring(paramsStart, paramsEnd)
+  }
 
   let renderStart = getOrThrow(functionalDeclaration, ['body', 'start'])
   let renderEnd = getOrThrow(functionalDeclaration, ['body', 'end'])
@@ -33,7 +37,7 @@ export function functionalToClass(source, functionalDeclaration) {
   patch.push(insert(functionalStart, `class ${functionalName} extends React.Component {`))
   patch.push(insert(functionalStart, `render()`))
   patch.push(remove(functionalStart, renderStart))
-  patch.push(insert(renderStart + 1, `\nlet ${paramsCode} = this.props;`))
+  if(hasParams) patch.push(insert(renderStart + 1, `\nlet ${paramsCode} = this.props;`))
   patch.push(insert(renderEnd, `}`))
 
   return patch
