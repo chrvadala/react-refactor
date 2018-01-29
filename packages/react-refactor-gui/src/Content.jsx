@@ -33,11 +33,11 @@ class Content extends React.Component {
     try {
       ({output} = ReactRefactor.execRefactor(source))
     } catch (err) {
-      this.setState({refactoredCode: '// Source file can\'t be refactored'})
+      this.setState({code: source, refactoredCode: '// Source file can\'t be refactored'})
       console.warn(err)
       return;
     }
-    if(!skipStateUpdate) this.setState({refactoredCode: output})
+    if (!skipStateUpdate) this.setState({code: source, refactoredCode: output})
     return output;
   }
 
@@ -45,10 +45,10 @@ class Content extends React.Component {
     return (
       <div style={S_CONTENT}>
         <div style={S_COL}>
-          <CodeEditor value={this.state.code} onChange={this.update}/>
+          <CodeEditor value={this.state.code} onChange={this.update} key="source"/>
         </div>
         <div style={S_COL}>
-          <CodeEditor value={this.state.refactoredCode}/>
+          <CodeEditor value={this.state.refactoredCode} key="dest"/>
         </div>
       </div>
     );
