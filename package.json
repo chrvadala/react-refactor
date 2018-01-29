@@ -4,7 +4,7 @@
   "devDependencies": {
     "cpy-cli": "^1.0.1",
     "gh-pages": "^1.1.0",
-    "lerna": "^2.5.1",
+    "lerna": "^2.8.0",
     "npm-run-all": "^4.1.2"
   },
   "scripts": {

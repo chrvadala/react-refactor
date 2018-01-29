@@ -10,7 +10,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "del-cli": "^1.1.0",
-    "jest": "^21.2.1"
+    "jest": "^22.1.4"
   },
   "scripts": {
     "test": "jest",
@@ -36,6 +36,6 @@
   "dependencies": {
     "react-refactor": "^0.0.18",
     "update-notifier": "^2.3.0",
-    "yargs": "^10.0.3"
+    "yargs": "^11.0.0"
   }
 }
