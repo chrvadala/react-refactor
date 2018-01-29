@@ -1,6 +1,6 @@
 {
   "name": "react-refactor",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "build/index.js",
   "module": "build/index.js",
   "license": "MIT",
