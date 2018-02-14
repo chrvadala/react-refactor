@@ -35,6 +35,7 @@ You can avoid installing anything and convert your component through the web int
 
 ## Changelog
 - **v0.0** - Preview version
+- **v1.0** - First stable version
 
 ## Run tests
 ````
