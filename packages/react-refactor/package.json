@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/chrvadala/react-refactor/issues"
   },
-  "homepage": "https://chrvadala.github.io/react-refactor"
+  "homepage": "https://chrvadala.github.io/react-refactor",
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
